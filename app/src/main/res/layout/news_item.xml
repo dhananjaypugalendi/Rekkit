@@ -32,6 +32,16 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@id/description"
         android:layout_below="@id/description"
+        android:textColor="#343434"
+        android:textSize="10sp"
+        android:text="Author123"/>
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/author"
+        android:layout_below="@id/description"
         android:gravity="end"
         android:textColor="#10bcc9"
         android:textSize="10sp"
