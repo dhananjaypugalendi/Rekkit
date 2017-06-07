@@ -6,6 +6,12 @@ import com.dhananjay.rekkit.commons.adapter.ViewType
 /**
  * Created by dhananjay on 5/6/17.
  */
+
+data class RedditNews(
+        val after: String,
+        val before: String,
+        val news: List<RedditNewsItem>)
+
 data class RedditNewsItem(
         val author: String,
         val title: String,

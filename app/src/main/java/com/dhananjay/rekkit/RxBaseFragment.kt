@@ -1,6 +1,6 @@
 package com.dhananjay.rekkit
 
-import android.app.Fragment
+import android.support.v4.app.Fragment
 import io.reactivex.disposables.CompositeDisposable
 
 /**
