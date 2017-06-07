@@ -22,8 +22,8 @@ class NewsManager(private val api: RestApi = RestApi()) {
                             item.thumbnail, item.url)
                 }
                 val redditNews = RedditNews(
-                        dataResponse.before ?: "",
                         dataResponse.after ?: "",
+                        dataResponse.before ?: "",
                         news
                 )
                 subscriber.onNext(redditNews)
