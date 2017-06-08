@@ -40,7 +40,8 @@ dependencies {
 
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile "com.squareup.retrofit2:converter-moshi:2.0.0"
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+
+    testCompile "org.mockito:mockito-core:2.8.9"
 }
 repositories {
     mavenCentral()

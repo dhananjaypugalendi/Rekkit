@@ -1,17 +1,18 @@
 package com.dhananjay.rekkit.commons
 
-import com.dhananjay.rekkit.api.RestApi
+import com.dhananjay.rekkit.api.NewsApi
+import com.dhananjay.rekkit.api.NewsRestApi
 import io.reactivex.Observable
 
 /**
  * Created by dhananjay on 7/6/17.
  */
-class NewsManager(private val api: RestApi = RestApi()) {
+class NewsManager(private val apiNews: NewsApi = NewsRestApi()) {
 
     fun getNews(after: String, limit: String = "10"): Observable<RedditNews>{
         return Observable.create {
             subscriber ->
-            val callResponse = api.getNews(after, limit)
+            val callResponse = apiNews.getNews(after, limit)
             val response = callResponse.execute()
 
             if(response.isSuccessful){
