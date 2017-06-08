@@ -1,61 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="5dp">
 
-    <ImageView
-        android:id="@+id/img_thumbnail"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"/>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/cardview_dark_background"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@id/img_thumbnail"
-        android:layout_toEndOf="@id/img_thumbnail"
-        android:textColor="#040404"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        android:typeface="sans"
-        android:text="this should be a long sentence like this"/>
+        <RelativeLayout
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/img_thumbnail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"/>
 
-    <TextView
-        android:id="@+id/author"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/description"
-        android:layout_below="@id/description"
-        android:textColor="#343434"
-        android:textSize="10sp"
-        android:text="Author123"/>
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/img_thumbnail"
+                android:layout_toEndOf="@id/img_thumbnail"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:typeface="sans"
+                android:text="this should be a long sentence like this"/>
 
-    <TextView
-        android:id="@+id/comments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@id/author"
-        android:layout_below="@id/description"
-        android:gravity="end"
-        android:textColor="#10bcc9"
-        android:textSize="10sp"
-        android:textStyle="bold"
-        android:text="30012 comments"/>
+            <TextView
+                android:id="@+id/author"
+                android:textStyle="italic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/description"
+                android:layout_below="@id/description"
+                android:textColor="#BDBDBD"
+                android:textSize="10sp"
+                android:text="Author123"/>
 
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@id/author"
-        android:layout_below="@id/author"
-        android:textColor="#343434"
-        android:textSize="10sp"
-        android:text="12 hours ago"/>
+            <TextView
+                android:id="@+id/comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/author"
+                android:layout_below="@id/description"
+                android:gravity="end"
+                android:textColor="#CFD8DC"
+                android:textSize="10sp"
+                android:text="30012 comments"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/author"
+                android:layout_below="@id/author"
+                android:textColor="#CFD8DC"
+                android:textSize="10sp"
+                android:text="12 hours ago"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
 
 </RelativeLayout>
