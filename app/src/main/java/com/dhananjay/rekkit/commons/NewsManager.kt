@@ -1,13 +1,16 @@
 package com.dhananjay.rekkit.commons
 
 import com.dhananjay.rekkit.api.NewsApi
-import com.dhananjay.rekkit.api.NewsRestApi
 import io.reactivex.Observable
+import javax.inject.Inject
+import javax.inject.Singleton
 
 /**
  * Created by dhananjay on 7/6/17.
  */
-class NewsManager(private val apiNews: NewsApi = NewsRestApi()) {
+
+@Singleton
+class NewsManager @Inject constructor(private val apiNews: NewsApi) {
 
     fun getNews(after: String, limit: String = "10"): Observable<RedditNews>{
         return Observable.create {

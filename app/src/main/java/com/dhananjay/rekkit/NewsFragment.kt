@@ -15,6 +15,7 @@ import com.dhananjay.rekkit.commons.inflate
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_news.*
+import javax.inject.Inject
 
 
 class NewsFragment  : RxBaseFragment(){
@@ -23,8 +24,13 @@ class NewsFragment  : RxBaseFragment(){
         private val KEY_REDDIT_NEWS = "redditNews"
     }
 
+    @Inject lateinit var newsManager : NewsManager
     private var redditNews: RedditNews? = null
-    private val newsManager by lazy { NewsManager() }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        RekkitApp.newsComponent.inject(this)
+    }
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
